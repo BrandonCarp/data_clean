@@ -1,0 +1,124 @@
+order_id,user_id,signup_date,order_date,country,state,city,product,category,unit_price,quantity,discount,shipping_cost,currency,payment_method,is_first_order,referral_source,coupon_code,total,notes
+10000,u5506,2023-10-13,2023-06-28,US,NY,Seattle,MiniGadget Lite,Gadgets,£29.19,two,0,,usd,crypto,1,affiliate, SUMMER15,,
+10001,u5552,11/20/2024,2025-01-05,US,,Berlin,NanoWidget Z,Widgets, USD 23.37,1,—,0,,Cash,0,affiliate,loyalty,calc,
+10000,,2025-01-17,2024-03-05,Australia,NY,Toronto,GigaGadget Pro,Gadgets,£30.77,2,0, 7.50,GBP,Amex,No,,N/A,,"gift, include note"
+10003,u5386,2024-10-06,2025-03-21,Canada,,Austin,MiniGadget Lite,Gadgets,€41.81,,—,0,,paypal,1,,,calc,re-shipped; first lost
+10004,u3504,"May 14, 2025",2025-08-16,US,NY,Sydney,CloudKey 2,Accessories,€22.6,3,0,0,GBP,MasterCard,,ads,loyalty,—,re-shipped; first lost
+10005,u5889,2023-11-10,01/02/2023,usa,il,Miami,MiniGadget Lite,Gadgets,$22.6,2,0%,4.99,USD,crypto,,organic,N/A,calc,"gift, include note"
+10006,,2024-03-09,2024-02-16,Australia,il,London ,QuietMouse S,Peripherals,$42.64,2,5,4.99,EUR,visa,No,affiliate,,,"gift, include note"
+10003,user-343,2025-09-21,2025-08-26,Germany,,Seattle,NanoWidget Z,Widgets,$32.09, 3 ,,Free,GBP,paypal,,ads,loyalty,,"Customer said ""deliver before 5"", please."
+10008,u5073,2025-07-07,07/24/2024,uk,,Berlin,NanoWidget Z,Widgets,$20.82, 3 ,—,0,USD,Cash,No,email, SUMMER15,calc,
+10004,,2024-08-07,23-09-2025,US,—,San Francisco,FiberLink Plus,Accessories,$29.66,1,0%, 7.50,,Cash,yes,ads,BLACK-FRIDAY,calc,"Customer said ""deliver before 5"", please."
+10010,u7615,03/23/23,10/09/24,DE,,Seattle ,CloudKey 2,Accessories, USD 20.86,1,10%,0,GBP,Amex,False,ads, SUMMER15,314.37,"Customer said ""deliver before 5"", please."
+10011,U5345,2024-05-15,2025-06-16,AUS,—,San Francisco,CloudKey 2,Accessories,€20.84,1,0,0,USD,visa,yes,social,WELCOME10,—,"gift, include note"
+10012,U9280,2023-07-09,20 Jul 2024,United States, FL,Austin,QuietMouse S,Peripherals,£26.7,5,—,0,USD,visa,yes,ads,N/A,190.92,"gift, include note"
+10006,u6862,2023-07-30,2025-04-12,CA,,Austin,GigaGadget Pro,Gadgets, USD 12.56,1,0,Free,GBP,Cash,No,social,,,"verify address, apt missing"
+10014,,2024-12-17,11-04-2024,Germany,,Chicago,CloudKey 2,Accessories,$13.41,2,15,,GBP,crypto,0,ads,,—,"gift, include note"
+10015,,2024-12-08,2023-08-25,CA,,Miami,UltraWidget X,Widgets,€20.15,5,0,,,crypto,No,, SUMMER15,—,re-shipped; first lost
+10016,,2024-10-30,2023-09-18,Germany,,Sydney,GigaGadget Pro,Gadgets,£17.21,two,10,$0,,Cash,True,social,WELCOME10,112.99,re-shipped; first lost
+10017,,2023-12-14,2024-11-17,CA,,Sydney,CloudKey 2,Accessories,27.38,2,0,0,USD,MasterCard,,organic, SUMMER15,213.08,"gift, include note"
+10018,U7547,07 Aug 2023,2025-08-09,usa,,Austin,QuietMouse S,Peripherals,€17.85,,—,Calculated at checkout,EUR,Cash,,N/A,N/A,0,"gift, include note"
+10019,user-960,"Sep 19, 2025",2023/06/08,DE,,Berlin,NanoWidget Z,Widgets,14.96,1,5,$0,usd,crypto,No,organic, SUMMER15,209.72,"verify address, apt missing"
+10020,U7883,2025/02/18,2024-09-03,Germany,,Berlin ,MiniGadget Lite,Gadgets, USD 40.98,2,10,$0,GBP,visa,1,,loyalty,0,refund?
+10021,,2023-02-25,2023/10/05,Germany,,Chicago,MiniGadget Lite,Gadgets, USD 22.67,3,15,$0,EUR,Cash,1,social,N/A,,refund?
+10022,U6733,2023-03-24,2024-02-13,CA,,Austin,QuietMouse S,Peripherals,€25.12,1,0%,12.0,GBP,crypto,TRUE,,,,
+10023,,03/23/25,2024-05-12,Canada,,Sydney,NanoWidget Z,Widgets,£14.9,1,15,,GBP,crypto,0,organic,BLACK-FRIDAY,,
+10024,,2023-11-10,2024-07-07,United Kingdom,,London,QuietMouse S,Peripherals, USD 20.28,two,10,Free,usd,Cash,False,social, SUMMER15,0,re-shipped; first lost
+10025,user-971,08 Jan 2024,2024-06-13,Canada,,Berlin ,UltraWidget X,Widgets,£25.5,2,0,12.0,GBP,paypal,No,,loyalty,0,
+10026,user-413,2025-08-27,05/21/25,uk,,Miami,CloudKey 2,Accessories,"16,4",2,0,12.0,EUR,visa,yes,affiliate,,—,refund?
+10027,u2647,2024-08-29,2024-09-11,United States, FL,San Francisco,UltraWidget X,Widgets,£27.98,2,0, 7.50,USD,Cash,True,social, SUMMER15,—,"gift, include note"
+10028,U8827,03/31/25,2023-04-20,Canada,,New York,MiniGadget Lite,Gadgets,$19.88,,,Calculated at checkout,,Cash,No,N/A, SUMMER15,—,
+10029,u2625,2024-03-08,11/18/2023,United States,CA,Phoenix,QuietMouse S,Peripherals,€22.15,two,N/A,0,USD,MasterCard,TRUE,social,loyalty,,refund?
+10030,u7965,2023-11-02,2023/05/27,AUS, FL,London,NanoWidget Z,Widgets, USD 19.87,2,,0,,wire,,,,0,refund?
+10031,U2496,05 Jul 2024,2023-12-25,uk,,Miami ,GigaGadget Pro,Gadgets,£46.91,5,10%, 7.50,USD,paypal,0,N/A,WELCOME10,,
+10032,,2023/03/17,2024-10-24,Germany,,Berlin,UltraWidget X,Widgets,€24.42,,N/A,$0,USD,MasterCard,0,,loyalty,,"gift, include note"
+10033,,2023-09-06,05/05/2024,United Kingdom,,Phoenix,NanoWidget Z,Widgets,16.94,1,N/A,4.99,usd,paypal,TRUE,social, SUMMER15,0,"gift, include note"
+10034,u9327,2023-05-23,2025-04-29,United Kingdom,,Miami,UltraWidget X,Widgets,"32,72",2,0%,Calculated at checkout,GBP,Cash,yes,,BLACK-FRIDAY,—,re-shipped; first lost
+10035,u4090,2025-02-23,"Apr 21, 2025",Germany,,Phoenix,GigaGadget Pro,Gadgets, USD 16.0,1,0,,,Amex,False,,,0,"Customer said ""deliver before 5"", please."
+10036,user-580,2024-11-24,2023-06-14,United Kingdom,,Phoenix,FiberLink Plus,Accessories,€26.39,10,—,0,,visa,No,social,,0,"Customer said ""deliver before 5"", please."
+10037,user-270,2023-03-01,2023-04-25,Germany,,Austin ,MiniGadget Lite,Gadgets,£12.36,5,0%,7.5,usd,MasterCard,False,N/A,BLACK-FRIDAY,0,re-shipped; first lost
+10038,U5161,2025-08-10,2023-11-20,DE,,Toronto,CloudKey 2,Accessories,€15.41,5,10, 7.50,EUR,MasterCard,1,,,126.23,   
+10039,,2024-07-16,2023-04-11,Canada,,Seattle,FiberLink Plus,Accessories,26.28, 3 ,5,Calculated at checkout,EUR,crypto,yes,organic,loyalty,—,
+10040,user-402,30 Apr 2025,2025-01-19,Canada,,Austin,CloudKey 2,Accessories, USD 31.77,2,15,4.99,GBP,visa,yes,affiliate,N/A,0,
+10041,U7464,2025-07-20,2024-06-20,Australia,il,New York,MiniGadget Lite,Gadgets, USD 26.05,1,0%,,EUR,wire,No,organic,loyalty,—,refund?
+10042,U1609,2023-07-19,2023-10-05,Australia,—,Phoenix,GigaGadget Pro,Gadgets, USD 23.56, 3 ,0, 7.50,,paypal,TRUE,ads,loyalty,0,"verify address, apt missing"
+10043,user-657,2023-05-05,08-09-2023,Australia,CA,San Francisco ,FiberLink Plus,Accessories,22.08,1,0%,12.0,USD,Cash,No,affiliate,N/A,—,
+10044,u5542,2023-09-24,2023-12-24,US,TX,San Francisco ,FiberLink Plus,Accessories,14.62,two,15,0,usd,Amex,True,email,loyalty,,refund?
+10045,U6931,2025-07-14,2023-03-30,uk,,Sydney ,UltraWidget X,Widgets,$19.07,10,,$0,USD,paypal,,organic,,calc,"Customer said ""deliver before 5"", please."
+10046,user-490,2025-07-18,2023-07-23,Australia,—,Seattle,DevKeyboard 87,Peripherals, USD 20.88,2,,Free,GBP,paypal,1,organic,WELCOME10,—,   
+10047,U8770,07/10/23,2025-02-02,AUS,—,Berlin,FiberLink Plus,Accessories,€35.52,1,,Free,GBP,Cash,True,social,BLACK-FRIDAY,,re-shipped; first lost
+10048,U8900,2024-12-18,"Jul 24, 2024",United Kingdom,,Toronto,UltraWidget X,Widgets,£27.67, 3 ,10,0,usd,Amex,TRUE,,WELCOME10,calc,re-shipped; first lost
+10044,u2503,2025-02-09,2023/11/19,AUS,NY,San Francisco,GigaGadget Pro,Gadgets,13.24,two,0,4.99,EUR,paypal,1,,BLACK-FRIDAY,—,"gift, include note"
+10050,,2024-09-23,23-04-2023,United States, FL,Miami,FiberLink Plus,Accessories,$27.48,1,N/A,$0,usd,MasterCard,1,affiliate,BLACK-FRIDAY,—,"Customer said ""deliver before 5"", please."
+10051,U8147,2024-10-03,2025-04-08,usa,az,San Francisco,FiberLink Plus,Accessories,21.44,two,N/A,Free,USD,paypal,False,affiliate, SUMMER15,298.55,"Customer said ""deliver before 5"", please."
+10052,u4630,2023-06-06,2024-02-02,Australia,TX,Seattle,NanoWidget Z,Widgets,19.36,2,5,7.5,,MasterCard,False,email,N/A,0,
+10053,,2023-05-20,2024-09-12,DE,,Berlin,NanoWidget Z,Widgets,"30,39",10,N/A,0,USD,Amex,TRUE,organic,loyalty,,re-shipped; first lost
+10054,u8368,2024-10-20,2023-11-05,DE,,New York,GigaGadget Pro,Gadgets,$35.19,2,N/A, 7.50,,wire,yes,,WELCOME10,0,"verify address, apt missing"
+10055,user-167,2023-07-13,2024-08-04,Australia,TX,Chicago,NanoWidget Z,Widgets,£33.99, 3 ,0,Free,EUR,crypto,1,email,BLACK-FRIDAY,,   
+10056,U6381,2025-05-17,12-01-2025,DE,,London,MiniGadget Lite,Gadgets,18.29,1,0,4.99,EUR,Cash,False,ads,loyalty,175.01,"gift, include note"
+10057,,2023-03-31,2024-05-01,uk,,Seattle,MiniGadget Lite,Gadgets,"22,02",10,5,Free,,paypal,,social,N/A,197.12,"verify address, apt missing"
+10058,,2025-01-30,13-09-2023,Canada,,London,GigaGadget Pro,Gadgets, USD 27.55,1,5, 7.50,EUR,visa,1,ads, SUMMER15,calc,"verify address, apt missing"
+10059,user-201,27 Oct 2023,2025-08-25,uk,,London ,UltraWidget X,Widgets,$34.52,1,10,12.0,usd,wire,1,organic,N/A,—,"Customer said ""deliver before 5"", please."
+10060,,2023-02-03,05/10/2024,AUS,il,Seattle,DevKeyboard 87,Peripherals,20.74, 3 ,10%,4.99,,Amex,False,ads, SUMMER15,,refund?
+10061,U1266,2024-12-07,2023-08-01,DE,,Austin,UltraWidget X,Widgets,"22,99",,15,7.5,GBP,crypto,,email,N/A,0,"Customer said ""deliver before 5"", please."
+10016,,08/27/25,2024-01-27,US,il,Miami,NanoWidget Z,Widgets,"16,66",5,, 7.50,GBP,Amex,yes,,loyalty,253.79,   
+10063,u8055,2024/08/24,2024-08-28,Germany,,Austin,QuietMouse S,Peripherals,"16,14",10,0,Free,,paypal,TRUE,ads,,0,   
+10064,,13 Mar 2023,2025-01-20,AUS,CA,Toronto,GigaGadget Pro,Gadgets,€32.6,10,15,Free,GBP,Cash,False,email,BLACK-FRIDAY,—,refund?
+10065,,2023-08-30,2025-07-02,Canada,,London,MiniGadget Lite,Gadgets,$39.44,1,0, 7.50,usd,crypto,,organic,N/A,—,refund?
+10038,u5914,2023-12-23,2023-09-06,CA,,London,UltraWidget X,Widgets,"23,92",,0%,Free,GBP,Cash,yes,organic,,0,re-shipped; first lost
+10067,U2208,2025-07-10,2024-12-06,United Kingdom,,Sydney,GigaGadget Pro,Gadgets,34.86,5,—,0,USD,wire,yes,social,,calc,   
+10068,u2292,2024-07-16,2023-07-11,AUS,TX,Austin ,FiberLink Plus,Accessories,£27.84,1,0,4.99,USD,crypto,TRUE,affiliate,N/A,290.35,refund?
+10069,user-757,2025-09-16,2025-04-11,US,TX,London ,DevKeyboard 87,Peripherals, USD 19.57,10,5,Free,,MasterCard,0,,loyalty,—,"verify address, apt missing"
+10070,,2023-09-08,"Oct 16, 2023",AUS,az,Seattle,GigaGadget Pro,Gadgets,"27,84",two,15,12.0,usd,paypal,,,WELCOME10,,"verify address, apt missing"
+10071,U4524,2024-07-30,2025-08-21,usa,az,Austin,CloudKey 2,Accessories,€42.03,3,,Free,USD,paypal,True,affiliate,WELCOME10,,"verify address, apt missing"
+10072,U5582,2025-03-17,2024-11-25,United States,WA,Toronto ,DevKeyboard 87,Peripherals,£24.23,1,0,0,usd,crypto,0,,BLACK-FRIDAY,233.92,re-shipped; first lost
+10073,user-502,2024-11-19,30 Sep 2025,US,il,Chicago,NanoWidget Z,Widgets, USD 42.42,two,10,0,,paypal,TRUE,affiliate,loyalty,0,"gift, include note"
+10074,u3421,2023-03-06,2023/08/14,Germany,,Austin,DevKeyboard 87,Peripherals,€9.81,2,,,,paypal,True,email,BLACK-FRIDAY,—,refund?
+10075,user-645,2024-12-26,2024-06-25,CA,,Miami ,CloudKey 2,Accessories,32.71,2,10,12.0,GBP,Amex,,,BLACK-FRIDAY,—,   
+10076,user-938,10/27/23,2023-06-11,Australia, FL,London,MiniGadget Lite,Gadgets,25.29,,10,,EUR,MasterCard,False,affiliate,,34.88,"gift, include note"
+10057,u8739,2023-01-11,2023-11-20,uk,,London,MiniGadget Lite,Gadgets,"22,09",3,10,0,USD,crypto,No,ads,,calc,"Customer said ""deliver before 5"", please."
+10078,user-866,2023-03-18,08/08/23,United Kingdom,,Berlin ,QuietMouse S,Peripherals,25.33,,N/A,0,usd,Cash,False,,,—,refund?
+10079,,2025-05-25,31-03-2025,uk,,Chicago,MiniGadget Lite,Gadgets,$12.24,2,,12.0,GBP,Cash,TRUE,,WELCOME10,295.41,"Customer said ""deliver before 5"", please."
+10080,U4871,08/11/25,2025-10-26,Australia, FL,Chicago,MiniGadget Lite,Gadgets,22.72,1,N/A,7.5,GBP,crypto,0,N/A,loyalty,0,
+10081,U4578,2025-07-03,09 Jun 2023,United Kingdom,,Berlin ,MiniGadget Lite,Gadgets,£27.8,,0,7.5,EUR,Cash,,organic,loyalty,110.65,"verify address, apt missing"
+10082,,"Jul 24, 2025",2024-09-23,US,WA,Toronto ,NanoWidget Z,Widgets,$41.15,5,15,4.99,,visa,False,,,calc,
+10083,,02/12/25,2023-09-30,usa,TX,Berlin,DevKeyboard 87,Peripherals,£20.46,1,5,0,USD,Amex,,N/A,BLACK-FRIDAY,calc,"gift, include note"
+10084,,02/02/2023,2023-03-10,US,WA,San Francisco,DevKeyboard 87,Peripherals, USD 18.49,2,—,12.0,USD,MasterCard,TRUE,affiliate,N/A,459.03,   
+10085,u4881,2024-03-28,2023-05-05,United States,az,Berlin,QuietMouse S,Peripherals,$20.58,3,10%,$0,,Amex,1,N/A,,calc,
+10086,u5927,2025-08-06,2025-05-03,Germany,,Seattle,CloudKey 2,Accessories,33.8,3,10%,4.99,GBP,Cash,0,organic,BLACK-FRIDAY,calc,"Customer said ""deliver before 5"", please."
+10087,u2192,2025-09-08,2024-11-12,US,WA,Seattle,NanoWidget Z,Widgets,€27.52,10,5,Calculated at checkout,usd,paypal,No,,N/A,0,re-shipped; first lost
+10088,,2023-07-21,2024-10-17,Germany,,San Francisco,MiniGadget Lite,Gadgets,€20.38,1,0,0,,wire,1,social,,calc,"verify address, apt missing"
+10089,,01 Oct 2025,2024-12-22,uk,,Austin,UltraWidget X,Widgets,£29.36,1,0,0,USD,paypal,yes,affiliate,,,"gift, include note"
+10090,U8916,04/22/25,2024-07-16,US,—,Sydney,DevKeyboard 87,Peripherals,25.38,1,0,,usd,MasterCard,No,social,N/A,0,"Customer said ""deliver before 5"", please."
+10091,U4984,2023-03-06,2025-02-11,Australia,CA,Austin,NanoWidget Z,Widgets, USD 34.43,5,10%,Free,,Cash,False,ads,,113.59,"verify address, apt missing"
+10092,U5593,03-01-2024,2023-10-23,Canada,,Austin ,MiniGadget Lite,Gadgets,£19.19,5,10%,,EUR,paypal,yes,organic,BLACK-FRIDAY,—,"Customer said ""deliver before 5"", please."
+10093,,2024-10-30,2025-07-11,Germany,,Phoenix,GigaGadget Pro,Gadgets,€21.87,two,10%,$0,USD,Cash,TRUE,affiliate,loyalty,—,"gift, include note"
+10094,user-424,2023/08/07,2025-06-29,usa,TX,New York,GigaGadget Pro,Gadgets, USD 21.39,10,—,,,paypal,False,ads,,,re-shipped; first lost
+10095,,2025-03-05,2024-05-12,Australia,az,Austin ,GigaGadget Pro,Gadgets,"14,7",2,10, 7.50,usd,visa,yes,N/A,WELCOME10,0,
+10096,u9123,07/26/2025,2025-03-21,Germany,,Chicago,QuietMouse S,Peripherals,"27,21",5,10%,Calculated at checkout,usd,Amex,0,affiliate, SUMMER15,0,   
+10097,,2024-07-28,2024-02-14,United States,—,San Francisco,QuietMouse S,Peripherals,€26.88,2,N/A,0,USD,Cash,1,,,calc,   
+10098,,2025-03-31,2025/05/06,United Kingdom,,Toronto ,NanoWidget Z,Widgets,$24.58,2,10%,Free,usd,crypto,True,N/A,N/A,0,"Customer said ""deliver before 5"", please."
+10099,u9499,2025-07-01,10/21/2025,uk,,New York,CloudKey 2,Accessories, USD 22.6,1,0,7.5,EUR,Amex,0,,N/A,0,   
+10100,user-168,2023/04/02,2023-08-12,CA,,Berlin ,GigaGadget Pro,Gadgets,£14.95,1,15,,GBP,paypal,No,N/A,loyalty,0,"verify address, apt missing"
+10101,,2025-03-07,2024-02-26,usa,NY,Berlin ,GigaGadget Pro,Gadgets,"21,17",3,5, 7.50,USD,Amex,,,BLACK-FRIDAY,0,re-shipped; first lost
+10102,user-933,2023-06-23,2024/05/03,United States,—,Phoenix ,DevKeyboard 87,Peripherals,£21.76,1,0%,$0,GBP,MasterCard,,email,BLACK-FRIDAY,—,"gift, include note"
+10103,,2023-10-07,2025-11-01,Australia,,Phoenix ,QuietMouse S,Peripherals, USD 18.53,1,0,Calculated at checkout,USD,Cash,No,social,,144.68,   
+10104,U9115,2024-07-02,2025-01-21,US,,Berlin,MiniGadget Lite,Gadgets, USD 23.19,1,10%,12.0,EUR,Cash,True,,WELCOME10,,"verify address, apt missing"
+10105,user-930,2025-05-26,2024-02-28,AUS,il,Berlin,CloudKey 2,Accessories,£28.26,,0,Free,EUR,Amex,TRUE,organic,,0,"Customer said ""deliver before 5"", please."
+10106,u3174,2024-10-21,03/15/25,Canada,,Sydney ,DevKeyboard 87,Peripherals, USD 47.47,10,0,4.99,GBP,wire,TRUE,, SUMMER15,—,re-shipped; first lost
+10107,user-750,2023-05-10,2025-05-29,DE,,Miami ,FiberLink Plus,Accessories,£26.08,two,0,Calculated at checkout,GBP,Cash,0,ads,,0,"Customer said ""deliver before 5"", please."
+10108,,2024-02-19,2024-09-10,Canada,,New York,FiberLink Plus,Accessories,"26,85",1,15,7.5,USD,paypal,TRUE,affiliate, SUMMER15,,"Customer said ""deliver before 5"", please."
+10083,,2023-01-20,2023-09-04,uk,,New York,MiniGadget Lite,Gadgets, USD 23.9,1,0,4.99,EUR,Amex,TRUE,email, SUMMER15,calc,refund?
+10110,u1138,2025-06-20,2023-11-07,uk,,Seattle ,NanoWidget Z,Widgets,$12.53,1,0,Calculated at checkout,GBP,Amex,1,,N/A,—,refund?
+10111,user-968,2024-02-25,01/22/2024,CA,,London,DevKeyboard 87,Peripherals,$24.31,2,N/A,Calculated at checkout,USD,wire,True,,WELCOME10,74.67,"verify address, apt missing"
+10112,U8717,01/29/2023,03/26/25,United Kingdom,,Phoenix,DevKeyboard 87,Peripherals,€25.06,5,0,,,wire,yes,social,,161.85,"gift, include note"
+10113,U6353,2024-09-27,"May 03, 2024",usa,,Toronto,UltraWidget X,Widgets,"58,1", 3 ,10%,7.5,USD,visa,yes,ads,,—,re-shipped; first lost
+10114,u3735,2024-07-04,2023-03-02,Canada,,Berlin ,NanoWidget Z,Widgets,"22,94",two,10%,4.99,GBP,paypal,0,ads, SUMMER15,calc,   
+10115,U2889,"Apr 01, 2023",2025-01-15,United States,CA,Berlin,DevKeyboard 87,Peripherals,27.26,3,5,$0,EUR,Amex,False,,,,"gift, include note"
+10116,,2024-08-01,2025-07-24,Canada,,Toronto ,CloudKey 2,Accessories,€24.24,two,5, 7.50,EUR,wire,,affiliate,loyalty,calc,"gift, include note"
+10117,U4817,2024-11-17,2025-02-09,CA,,Phoenix ,QuietMouse S,Peripherals,$16.3,1,10,4.99,USD,MasterCard,1,, SUMMER15,,re-shipped; first lost
+10118,U7461,2025/06/09,2024-10-07,DE,,Chicago,QuietMouse S,Peripherals,"36,6",2,0,12.0,usd,Cash,False,email,,0,   
+10119,,26 Jun 2024,15 Sep 2024,DE,,Austin,NanoWidget Z,Widgets,€31.92,2,15,$0,,visa,TRUE,social,N/A,,"verify address, apt missing"
+99999,user-123,2025/01/31,31-01-2025,United States , ca ,"""Los Angeles, CA""","UltraWidget X ""Limited, Edition""",Widgets,"$29,99",1 ,5%,Free ,USD ,paypal,YES,affiliate,WELCOME10,calc,"Customer wrote: ""pls leave @ front desk"""
+,,N/A,,—,,,,,,,,Calculated at checkout,,,,,,,
+10001,U7777,2024-12-12,"Dec 12, 2024",DE,,Berlin,GigaGadget Pro,Gadgets,$9999.99,1000,0%,0,EUR,wire,false,email,,,enterprise bulk test
