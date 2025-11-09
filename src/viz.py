@@ -1,6 +1,13 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
+# def main(clean_csv: str):
+
+
+
+
+
 def hist_plot():
     sns.histplot(df["unit_price_num"].dropna(), bins=30, kde=True)
     plt.title("Unit Price Distribution")
@@ -42,3 +49,6 @@ def month_orders():
     plt.title("Monthly Revenue")
     plt.xlabel("Month"); plt.ylabel("Revenue")
     plt.tight_layout(); plt.show()
+
+
+# main()
