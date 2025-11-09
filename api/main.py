@@ -15,6 +15,6 @@ async def main():
 
 @app.post("/upload_csv/")
 async def upload_csv(file: UploadFile = File(...)):
-    contents = await file.read()
+    contents = await File.read()
     # process CSV here
-    return {"filename": file.filename, "size": len(contents)}
+    return {"filename": File.filename, "size": len(contents)}
