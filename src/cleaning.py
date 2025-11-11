@@ -21,7 +21,7 @@ import numpy as np
 
 csv = "../data/raw_orders.csv"
 
-def main(csv: str):
+def main(csv: str): 
     df = pd.read_csv(csv)
     df = clean_strings(df)
     df = parse_cost(df)
@@ -32,7 +32,7 @@ def main(csv: str):
     write(df)
 
 
-def df_description(csv):
+def clean_strings(csv):
     df = df.dropna(subset=["order_id", "order_date"])
     df["discount"] = df["discount"].replace({"—": np.nan, "N/A": np.nan, "": np.nan})
     df["discount"] = df["discount"].fillna("0")
