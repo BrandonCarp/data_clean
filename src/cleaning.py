@@ -2,41 +2,29 @@ import pandas as pd
 import numpy as np
 
 
-# What you likely need to tweak in your notebook
-
-# Order of operations: do strings → money → quantities → dates → booleans →
-# key drops → features → validate → write. Keep derived stuff at the end.
-
-# No globals: each step should take a DataFrame in, return a DataFrame out.
-# One small coordinator does read/run/write.
-
-# Finish each function: keep truthy/falsy sets inside the boolean step; return the result;
-# avoid stray lines running outside functions.
-
-# Assertions with messages: your two asserts are great—add friendly messages and a couple more
-# (keys non-null, numeric dtypes correct).
-
-# Tiny logs: after each step, print shape deltas and key counts changed (e.g., “discount: 101 null → 0”).
 
 
-csv = "../data/raw_orders.csv"
+# csv = "../data/raw_orders.csv"
 
-def main(csv: str): 
-    df = pd.read_csv(csv)
+def main(df: pd.DataFrame) -> pd.DataFrame:
     df = clean_strings(df)
     df = parse_cost(df)
-    df = parse_quantity(df)
-    df = parse_dates(df)
-    df = parse_booleans(df)
-    validate(df)
-    write(df)
+    df = string_change(df)
+    df = signup_order(df)
+    df = truthy_falsy(df)
+  
+    return df
 
 
-def clean_strings(csv):
-    df = df.dropna(subset=["order_id", "order_date"])
-    df["discount"] = df["discount"].replace({"—": np.nan, "N/A": np.nan, "": np.nan})
-    df["discount"] = df["discount"].fillna("0")
-
+def clean_strings(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.dropna(subset=["order_id", "order_date"]).copy()
+    
+    df["discount"] = (
+        df["discount"]
+        .replace({"—": np.nan, "N/A": np.nan, "": np.nan})
+        .fillna("0")
+    )
+    
     for col in ["country", "state", "city", "currency", "payment_method"]:
         df[col] = (
             df[col]
@@ -44,7 +32,10 @@ def clean_strings(csv):
             .str.strip()
             .str.lower()
             .replace({"—": np.nan, "": np.nan})
-    )
+        )
+    
+    return df
+
 
 
 # money
@@ -57,54 +48,44 @@ def parse_money(s: pd.Series) -> pd.Series:
     return pd.to_numeric(s, errors="coerce")
 
 # Parse Cost
-def parse_cost(csv):
+def parse_cost(df: pd.DataFrame) -> pd.DataFrame:
     df["unit_price_num"] = parse_money(df["unit_price"])
     df["shipping_cost_num"] = parse_money(df["shipping_cost"])
     df["total_num"] = parse_money(df["total"])
+    return df
 
 
 # String Changes
-def string_change(csv):
-
-    word_to_int = {"one":1, "two":2, "three":3, "ten":10}
+def string_change(df: pd.DataFrame) -> pd.DataFrame:
+    word_to_int = {"one": 1, "two": 2, "three": 3, "ten": 10}
+    
     q = df["quantity"].astype(str).str.strip().str.lower()
     q = q.replace(word_to_int)
     q = q.str.replace(r'%', '', regex=True)
     q = q.replace({"": np.nan, "—": np.nan})
-    pd.to_numeric(..., errors="coerce")
+    q = pd.to_numeric(q, errors="coerce")
+    
+    df["quantity_num"] = q
+    return df
 
 
 
-def signup_order(csv):
+def signup_order(df: pd.DataFrame) -> pd.DataFrame:
     df["signup_dt"] = pd.to_datetime(df["signup_date"], errors="coerce")
 
     df["order_dt"]  = pd.to_datetime(df["order_date"],  errors="coerce")
+    return df
 
-
-def truthy_falsy(csv):
+def truthy_falsy(df: pd.DataFrame) -> pd.DataFrame:
 
     truthy = {"1","true","yes","y","t"}
     falsy  = {"0","false","no","n","f"}
 
-s = df["is_first_order"].astype(str).str.strip().str.lower()
-df["is_first_order_bool"] = np.where(s.isin(truthy), True,
-                               np.where(s.isin(falsy), False, np.nan))
-
-
-assert df["order_id"].isna().sum() == 0
-assert df["unit_price_num"].dtype.kind in "fi"
-
+    s = df["is_first_order"].astype(str).str.strip().str.lower()
+    df["is_first_order_bool"] = np.where(s.isin(truthy), True,
+        np.where(s.isin(falsy), False, np.nan))
+    df["unit_price_log"] = np.log1p(df["unit_price_num"].clip(lower=0))
+    return df
 
 
 
-
-
-df["unit_price_log"] = np.log1p(df["unit_price_num"].clip(lower=0))
-
-
-def clean_func():
-
-    df_clean = df.copy()
-    df_clean.to_csv("../data/processed/clean_orders.csv", index=False)
-
-main(csv)
