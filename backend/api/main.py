@@ -20,8 +20,6 @@ app.add_middleware(
 )
 
 
-
-
 @app.post("/clean_csv/")
 async def upload_csv(file: UploadFile = File(...)):
     

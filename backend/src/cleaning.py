@@ -69,7 +69,6 @@ def string_change(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-
 def signup_order(df: pd.DataFrame) -> pd.DataFrame:
     df["signup_dt"] = pd.to_datetime(df["signup_date"], errors="coerce")
 
