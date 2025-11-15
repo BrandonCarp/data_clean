@@ -1,0 +1,10 @@
+ScrubHub !!!
+
+Pseudo Notes
+
+Only Cleaning 1 file as of now raw_data in my backend
+
+Want to show a sample of the raw data 
+
+Have a button that only sends that data to the backend to be cleaned
+
