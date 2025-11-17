@@ -1,4 +1,8 @@
 
+// load Csv   
+// display 
+// temporary upload doesnt work file input
+
 export default function Preview(){
   return (
     <div>
