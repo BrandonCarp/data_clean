@@ -36,31 +36,7 @@ export default function CsvPreview() {
 
   if (loading) return <div>Loading messy CSV…</div>;
 
-  // return (
-  //   <section className="overflow-x-auto mt-10 flex flex-col text-center p-5">
-  //     <h2 className="text-sm font-semibold mb-2">Messy CSV Preview</h2>
-  //     <table className="border-separate border-spacing-x-2 text-xs border-1 rounded p-1">
-  //       <thead className="w-[100%] border-b border-white">
-  //         <tr className="">
-  //           {headers.map((h) => (
-  //             <th className="" key={h}>
-  //               {h}
-  //             </th>
-  //           ))}
-  //         </tr>
-  //       </thead>
-  //       <tbody className="text-gray-400">
-  //         {rows.slice(0, 10).map((row, i) => (
-  //           <tr className="" key={i}>
-  //             {headers.map((h) => (
-  //               <td key={h} className="whitespace-nowrap px-2 py-1">{String(row[h] ?? "")}</td>
-  //             ))}
-  //           </tr>
-  //         ))}
-  //       </tbody>
-  //     </table>
-  //   </section> 
-  // );
+
   return (
   <section className="mt-10 flex flex-col gap-2 px-5">
     <h2 className="ml-2 text-sm font-semibold text-slate-100">
