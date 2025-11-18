@@ -7,10 +7,11 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center mx-5 mt-3">
       <Image
-        className=""
+        className="w-25 h-auto"
+        loading="eager"
         src={logo}
-        width={125}
-        height={125}
+        width={100}
+        height={100}
         alt="ScrubHub Logo"
       />
       <Link

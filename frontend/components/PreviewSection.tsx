@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
 
@@ -35,33 +34,74 @@ export default function CsvPreview() {
     })();
   }, []);
 
-  if (loading) return <div>Loading sample messy CSV…</div>;
+  if (loading) return <div>Loading messy CSV…</div>;
 
+  // return (
+  //   <section className="overflow-x-auto mt-10 flex flex-col text-center p-5">
+  //     <h2 className="text-sm font-semibold mb-2">Messy CSV Preview</h2>
+  //     <table className="border-separate border-spacing-x-2 text-xs border-1 rounded p-1">
+  //       <thead className="w-[100%] border-b border-white">
+  //         <tr className="">
+  //           {headers.map((h) => (
+  //             <th className="" key={h}>
+  //               {h}
+  //             </th>
+  //           ))}
+  //         </tr>
+  //       </thead>
+  //       <tbody className="text-gray-400">
+  //         {rows.slice(0, 10).map((row, i) => (
+  //           <tr className="" key={i}>
+  //             {headers.map((h) => (
+  //               <td key={h} className="whitespace-nowrap px-2 py-1">{String(row[h] ?? "")}</td>
+  //             ))}
+  //           </tr>
+  //         ))}
+  //       </tbody>
+  //     </table>
+  //   </section> 
+  // );
   return (
-    <section>
-      <h2>Example messy CSV (preview)</h2>
-      <p>This is a small slice of the raw file before cleaning.</p>
+  <section className="mt-10 flex flex-col gap-2 px-5">
+    <h2 className="ml-2 text-sm font-semibold text-slate-100">
+      Messy CSV Preview
+    </h2>
 
-      <table className="border-separate border-spacing-x-4 overflow-x-auto">
-        <thead className="bg-white text-black space-x-10">
-          <tr className="">
-            {headers.map((h) => (
-              <th className="" key={h}>
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.slice(0, 5).map((row, i) => (
-            <tr key={i}>
-              {headers.map((h) => (
-                <td key={h}>{String(row[h] ?? "")}</td>
+    <div className="overflow-x-auto">
+      <div className="inline-block min-w-full align-middle">
+        {/* outer card */}
+        <div className="overflow-hidden rounded-xl border border-slate-700 bg-slate-900">
+          <table className="min-w-full border-collapse text-xs">
+            <thead>
+              <tr className="bg-slate-900">
+                {headers.map((h) => (
+                  <th
+                    key={h}
+                    className="px-4 py-3 text-left text-slate-100 border-b border-slate-700"
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="text-slate-200">
+              {rows.slice(0, 5).map((row, i) => (
+                <tr
+                  key={i}
+                  className="bg-slate-800 border-b border-slate-800 last:border-b-0 hover:bg-slate-800/80"
+                >
+                  {headers.map((h) => (
+                    <td key={h} className="px-4 py-3 whitespace-nowrap">
+                      {String(row[h] ?? "")}
+                    </td>
+                  ))}
+                </tr>
               ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
-  );
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 }
