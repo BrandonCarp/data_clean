@@ -38,9 +38,7 @@ export default function CsvPreview() {
 
   return (
     <section className="mt-10 flex flex-col gap-2 px-5">
-      <h2 className="ml-2 text-sm font-semibold text-slate-100">
-        Messy CSV Preview
-      </h2>
+      <h2 className="ml-2 text-sm font-semibold ">Messy CSV Preview</h2>
 
       <div className="overflow-x-auto w-[275px] rounded-xl border border-slate-700 bg-slate-900 text-xs">
         <table className="overflow-hidden  ">
