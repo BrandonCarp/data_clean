@@ -1,8 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
+import { Row } from "@/lib/types/typeHelpers";
+import TableCard from "./TableCard";
 
-type Row = Record<string, string | number | null>;
+// async load func fetch csv , await res.text return text
+// useState rows, headers, loading
+// in useEffect call load csv, Papa.parse<Row>(text, { header: skipEmptyLines}) result data +  set rows/headers
 
 async function loadCsv() {
   const res = await fetch("/data/raw_orders.csv");
@@ -38,38 +42,7 @@ export default function CsvPreview() {
 
   return (
     <section className="mt-10 flex flex-col gap-2 px-5">
-      <h2 className="ml-2 text-sm font-semibold ">Messy CSV Preview</h2>
-
-      <div className="overflow-x-auto w-[275px] rounded-xl border border-slate-700 bg-slate-900 text-xs">
-        <table className="overflow-hidden  ">
-          <thead>
-            <tr className="bg-slate-900">
-              {headers.map((h) => (
-                <th
-                  key={h}
-                  className="px-4 py-3 text-left text-slate-100 border-b border-slate-700"
-                >
-                  {h}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="text-slate-200 ">
-            {rows.slice(0, 5).map((row, i) => (
-              <tr
-                key={i}
-                className="bg-slate-800 border-b border-slate-700 last:border-b-0 hover:bg-slate-800/80"
-              >
-                {headers.map((h) => (
-                  <td key={h} className="px-4 py-3 whitespace-nowrap">
-                    {String(row[h] ?? "")}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <TableCard rows={rows} headers={headers} />
     </section>
   );
 }

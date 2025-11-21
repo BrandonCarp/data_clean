@@ -7,7 +7,7 @@ import UploadButton from "./UploadButton";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center mx-5 mt-3 ">
+    <nav className="flex justify-between items-center px-5 py-3 border-b-2 border-gray-300">
       <Image
         className="invert dark:invert-0 h-auto w-35"
         loading="eager"

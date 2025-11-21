@@ -1,10 +1,43 @@
-ScrubHub !!!
+React components → PascalCase
 
-Pseudo Notes
+Navbar.tsx, CsvPreview.tsx, DarkModeToggle.tsx
 
-Only Cleaning 1 file as of now raw_data in my backend
+function CsvPreview() { ... }
 
-Want to show a sample of the raw data 
+Types / Interfaces / Enums → PascalCase
 
-Have a button that only sends that data to the backend to be cleaned
+type OrderRow = { ... }
 
+interface User { ... }
+
+Functions & helpers → camelCase
+
+parseMoney, loadCsv, formatDate
+
+File names for helpers: usually kebab-case or camelCase:
+
+parse-money.ts or parseMoney.ts (just be consistent inside lib/)
+
+Variables, props, state → camelCase
+
+const isDarkMode = ...
+
+const [rows, setRows] = useState<Row[]>([])
+
+Route segments (folders in app/) → kebab-case
+
+app/user-settings/page.tsx → /user-settings
+
+app/raw-orders/page.tsx → /raw-orders
+
+Next.js special files (framework stuff) → all lowercase
+
+page.tsx, layout.tsx, loading.tsx, error.tsx, not-found.tsx, route.ts
+
+So your mental shortcut can be:
+
+PascalCase → “things that are types or components”
+
+camelCase → “things that do stuff or hold values”
+
+kebab-case → “URLs / generic filenames”
