@@ -19,7 +19,7 @@ export default function DarkButton() {
   };
 
   useEffect(() => {
-    const theme = localStorage.getItem("theme");
+   const theme = localStorage.getItem("theme");
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       setDarkMode("dark");
@@ -45,3 +45,28 @@ export default function DarkButton() {
     </button>
   );
 }
+
+
+
+// Look Into
+// 1. state is derived from external stuff *before* effects run
+// const [darkMode, setDarkMode] = useState(() => {
+//   if (typeof window === "undefined") return "light"; // SSR safety
+//   return localStorage.getItem("theme") ?? "light";
+// });
+
+// // 2. effect: push state *out* to DOM + localStorage whenever it changes
+// useEffect(() => {
+//   if (darkMode === "dark") {
+//     document.documentElement.classList.add("dark");
+//     localStorage.setItem("theme", "dark");
+//   } else {
+//     document.documentElement.classList.remove("dark");
+//     localStorage.setItem("theme", "light");
+//   }
+// }, [darkMode]);
+
+// // 3. event handler: flip the state
+// const toggleTheme = () => {
+//   setDarkMode((prev) => (prev === "dark" ? "light" : "dark"));
+// };

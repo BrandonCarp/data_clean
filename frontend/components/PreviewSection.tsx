@@ -41,7 +41,7 @@ export default function CsvPreview() {
   if (loading) return <div>Loading messy CSV…</div>;
 
   return (
-    <section className="mt-10 flex flex-col gap-2 px-5">
+    <section className="m-3">
       <TableCard rows={rows} headers={headers} />
     </section>
   );
