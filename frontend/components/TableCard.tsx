@@ -18,6 +18,7 @@ export default function TableCard({ rows, headers }: CsvTableProps) {
         <div className="w-full bg-orange-50 border-b border-gray-300 px-2 py-2 text-sm">
           <div className="flex">
             <h1 className="flex items-center gap-2 text-lg text-amber-900">
+              {/* change to check mark as prop */}
               <ExclamationCircleIcon className="size-6 text-amber-600" />
               Original CSV
             </h1>

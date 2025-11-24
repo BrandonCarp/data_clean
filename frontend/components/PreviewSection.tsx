@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Papa from "papaparse";
 import { Row } from "@/lib/types/typeHelpers";
 import TableCard from "./TableCard";
+import { SparklesIcon } from "@heroicons/react/24/solid";
+
 
 // async load func fetch csv , await res.text return text
 // useState rows, headers, loading
@@ -41,8 +43,12 @@ export default function CsvPreview() {
   if (loading) return <div>Loading messy CSV…</div>;
 
   return (
-    <section className="m-3">
+    <section className="mt-5 mx-5">
       <TableCard rows={rows} headers={headers} />
+      <div className="flex justify-center">
+
+      <button className="flex items-center bg-gray-900 text-white font-medium py-1 px-10 mt-5 rounded hover:bg-gray-700 cursor-pointer "><SparklesIcon className="size-4 mr-2" /> Clean Csv</button>
+      </div>
     </section>
   );
 }
