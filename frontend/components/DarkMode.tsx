@@ -19,10 +19,10 @@ export default function DarkButton() {
   };
 
   useEffect(() => {
-   const theme = localStorage.getItem("theme");
+
+      const theme = localStorage.getItem("theme");
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
-      setDarkMode("dark");
     }
   }, []);
 
