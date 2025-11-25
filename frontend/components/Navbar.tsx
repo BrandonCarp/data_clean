@@ -5,9 +5,20 @@ import logo from "../public/images/logo.png";
 import DarkButton from "./DarkMode";
 import UploadButton from "./UploadButton";
 
+// colors: {
+//   gray: {
+//     darkest: "#0f0f0fff",
+//     dark: "#161616ff",
+//     light: "#DADADA",
+//     lightest: "#F5F5F5",
+//   },
+//   purple: {
+//     main: "#B582F4",
+//   },
+
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-5 py-3 border-b-2 border-gray-300">
+    <nav className="flex justify-between items-center px-5 py-3 border-b-1 bg-white dark:bg-gray-dark border-gray-200 dark:border-none">
       <Image
         className="invert dark:invert-0 h-auto w-35"
         loading="eager"
@@ -29,6 +40,7 @@ export default function Navbar() {
             alt="ScrubHub GitHub Link"
           />
         </Link>
+        {/* Change dark mode button to toggle or 3 dots with a modal that drops down or  */}
         <DarkButton />
         <UploadButton />
       </div>

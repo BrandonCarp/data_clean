@@ -1,6 +1,4 @@
-"use client";
-import { useEffect } from "react";
-import type { Config } from "tailwindcss";
+import { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -10,7 +8,19 @@ const config: Config = {
   ],
   darkMode: "selector",
   theme: {
-    extend: {},
+    extend: {
+      // colors: {
+      //   gray: {
+      //     darkest: "#0f0f0fff",
+      //     dark: "#1C1C1C",
+      //     light: "#DADADA",
+      //     lightest: "#F5F5F5",
+      //   },
+      //   purple: {
+      //     main: "#B582F4",
+      //   },
+      // },
+    },
   },
   plugins: [],
 };

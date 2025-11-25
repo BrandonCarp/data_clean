@@ -4,7 +4,8 @@ import Papa from "papaparse";
 import { Row } from "@/lib/types/typeHelpers";
 import TableCard from "./TableCard";
 import { SparklesIcon } from "@heroicons/react/24/solid";
-
+import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
+// import CheckCircleIcon from "@heroicons/react/24/outline"; - for cleaned csv
 
 // async load func fetch csv , await res.text return text
 // useState rows, headers, loading
@@ -44,10 +45,19 @@ export default function CsvPreview() {
 
   return (
     <section className="mt-5 mx-5">
-      <TableCard rows={rows} headers={headers} bgColor="bg-orange-50" textColor="text-amber-900" heroicon="ExclamationCircleIcon"/>
+      <TableCard
+        rows={rows}
+        headers={headers}
+        title="Original CSV"
+        subtitle="Messy Data with onconsistencies"
+        heroicon={
+          <ExclamationCircleIcon className="size-4 mr-1 text-amber-900" />
+        }
+      />
       <div className="flex justify-center">
-
-      <button className="flex items-center bg-gray-900 text-white font-medium py-1 px-10 mt-5 rounded hover:bg-gray-700 cursor-pointer "><SparklesIcon className="size-4 mr-2" /> Clean Csv</button>
+        <button className="flex items-center bg-purple-main text-white font-medium py-1 px-10 mt-5 rounded hover:bg-gray-700 cursor-pointer ">
+          <SparklesIcon className="size-4 mr-2" /> Clean Csv
+        </button>
       </div>
     </section>
   );
