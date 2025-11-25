@@ -44,7 +44,7 @@ export default function CsvPreview() {
 
   return (
     <section className="mt-5 mx-5">
-      <TableCard rows={rows} headers={headers} />
+      <TableCard rows={rows} headers={headers} bgColor="bg-orange-50" textColor="text-amber-900" heroicon="ExclamationCircleIcon"/>
       <div className="flex justify-center">
 
       <button className="flex items-center bg-gray-900 text-white font-medium py-1 px-10 mt-5 rounded hover:bg-gray-700 cursor-pointer "><SparklesIcon className="size-4 mr-2" /> Clean Csv</button>

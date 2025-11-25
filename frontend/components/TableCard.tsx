@@ -1,36 +1,34 @@
 import { Row } from "@/lib/types/typeHelpers";
 import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
+import type { SVGProps } from "react";
 
 type CsvTableProps = {
   rows: Row[];
   headers: string[];
   bgColor?: string; 
   textColor?: string;
+  heroicon?: React.ComponentType<SVGProps<SVGSVGElement>>;
 };
 
-
-export default function TableCard({ rows, headers }: CsvTableProps) {
+export default function TableCard({ rows, headers, bgColor, textColor }: CsvTableProps) {
   return (
-    <div className="relative overflow-x-auto rounded-xl border border-gray-300">
-      {/* 👇 this wrapper controls the scroll width */}
-      <div className="min-w-max">
-        {/* orange banner */}
-        <div className="w-full bg-orange-50 border-b border-gray-300 px-2 py-2 text-sm">
+    <div className="relativ overflow-hidden  rounded-xl border border-gray-300">
+        <div className={`w-full ${bgColor} border-b border-gray-300  px-2 py-2 text-sm`}>
           <div className="flex">
-            <h1 className="flex items-center gap-2 text-lg text-amber-900">
+            <h1 className={`flex items-center gap-2 text-lg ${textColor}`}>
               {/* change to check mark as prop */}
-              <ExclamationCircleIcon className="size-6 text-amber-600" />
+              <`${heroicon}` className="size-6 text-amber-900" />
               Original CSV
             </h1>
           </div>
-          <h2 className="p-1 text-amber-800">
+          <h2 className={`p-1 ${textColor}`}>
             Messy data with inconsistencies
           </h2>
         </div>
-
-        {/* table now shares the same width */}
+       <div className="overflow-x-auto">
+         <div className="min-w-max">
         <table className="min-w-full text-left text-sm">
-          <thead className="bg-gray-100">
+          <thead className="bg-gray-300 dark:text-black">
             <tr>
               {headers.map((h) => (
                 <th className="px-5 py-3 font-medium" key={h}>
@@ -39,7 +37,7 @@ export default function TableCard({ rows, headers }: CsvTableProps) {
               ))}
             </tr>
           </thead>
-          <tbody className="border-b border-gray-300">
+          <tbody className="border-b border-gray-400">
             {rows.slice(0, 5).map((row, i) => (
               <tr className="whitespace-nowrap" key={i}>
                 {headers.map((h) => (
@@ -52,6 +50,7 @@ export default function TableCard({ rows, headers }: CsvTableProps) {
           </tbody>
         </table>
       </div>
+       </div>
     </div>
   );
 }
