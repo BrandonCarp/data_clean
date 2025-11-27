@@ -7,7 +7,16 @@
   --color-gray-light: #dadada;
   --color-gray-lightest: #f5f5f5;
   --color-purple-main: #b582f4;
+  --color-orange-main: #5a3401ff;
+  --color-orange-textdark: #bd5519ff;
+  --color-orange-textlight: #f7853aff;
 }
+
+/* //   orange: {
+//     main: "#5a3401ff",
+//     textdark: "#bd5519ff"
+//     textlight: "#f7853aff"
+//   }, */
 
 /* :root {
   --background: #ffffff;

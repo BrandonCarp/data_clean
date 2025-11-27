@@ -18,9 +18,15 @@ type CsvTableProps = {
 //     dark: "#1a1919ff",
 //     light: "#DADADA",
 //     lightest: "#F5F5F5",
+// 
 //   },
 //   purple: {
 //     main: "#B582F4",
+//   },
+//   orange: {
+//     main: "#5a3401ff",
+//     textdark: "#bd5519ff"
+//     textlight: "#f7853aff"
 //   },
 
 export default function TableCard({
