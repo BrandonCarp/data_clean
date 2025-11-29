@@ -55,7 +55,7 @@ export default function CsvPreview() {
         }
       />
       <div className="flex justify-center">
-        <button className="flex items-center bg-purple-main text-white font-medium py-1 px-10 mt-5 rounded hover:bg-gray-700 cursor-pointer ">
+        <button className="flex items-center bg-purple-main text-white font-medium py-1 px-10 mt-5 rounded hover:bg-gray-700 cursor-pointer dark:hover:bg-purple-light ">
           <SparklesIcon className="size-4 mr-2" /> Clean Csv
         </button>
       </div>
