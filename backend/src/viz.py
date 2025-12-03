@@ -5,9 +5,6 @@ import seaborn as sns
 # def main(clean_csv: str):
 
 
-
-
-
 def hist_plot():
     sns.histplot(df["unit_price_num"].dropna(), bins=30, kde=True)
     plt.title("Unit Price Distribution")

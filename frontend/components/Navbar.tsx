@@ -5,20 +5,20 @@ import logo from "../public/images/logo.png";
 import DarkButton from "./DarkMode";
 import UploadButton from "./UploadButton";
 
-// colors: {
-//   gray: {
-//     darkest: "#0f0f0fff",
-//     dark: "#161616ff",
-//     light: "#DADADA",
-//     lightest: "#F5F5F5",
-//   },
-//   purple: {
-//     main: "#B582F4",
-//   },
+// @theme {
+//   --color-gray-bg: #0f0f0fff;
+//   --color-gray-secondary: #1a1919ff;
+//   --color-gray-text: #242323ff;
+//   --color-purple-main: #7f20f3ff;
+//   --color-purple-light: #8d33faff;
+//   --color-orange-main: #f3b43fff;
+//   --color-orange-secondary: #f08344ff;
+//   --color-orange-text: #f7853aff;
 
+// }
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-5 py-3 border-b-1 bg-white dark:bg-gray-dark border-gray-200 dark:border-none">
+    <nav className="flex justify-between items-center px-5 py-3 border-b-1 bg-white dark:bg-gray-secondary border-gray-200 dark:border-none">
       <Image
         className="invert dark:invert-0 h-auto w-35"
         loading="eager"

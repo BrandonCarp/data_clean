@@ -2,35 +2,20 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-gray-darkest: #0f0f0fff;
-  --color-gray-dark: #1a1919ff;
-  --color-gray-light: #242323ff;
-  --color-gray-lightest: #dbd5d5ff;
+  --color-gray-bg: #0f0f0fff;
+  --color-gray-secondary: #1a1919ff;
+  --color-gray-third: #242323ff;
+  --color-gray-hover: #363535ff;
+  --color-gray-text: #b3afafff;
   --color-purple-main: #7f20f3ff;
   --color-purple-light: #8d33faff;
   --color-orange-main: #f3b43fff;
-  --color-orange-textdark: #f08344ff;
-  --color-orange-textlight: #f7853aff;
-  --color-orange-lightest: #ff810cff;
+  --color-orange-secondary: #f08344ff;
+  --color-orange-text: #7c3b10ff;
+  --color-green-text: #155a07ff;
 }
 
-/* // colors: {
-//   gray: {
-//     darkest: "#0f0f0fff",
-//     dark: "#1a1919ff",
-//     light: "#DADADA",
-//     lightest: "#dbd5d5ff",
-// 
-//   },
-//   purple: {
-//     main: "#8e3bf3ff",
-//     light: "#aa6bf7ff", */
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

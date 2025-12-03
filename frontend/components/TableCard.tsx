@@ -1,5 +1,9 @@
+"use client";
 import { Row } from "@/lib/types/typeHelpers";
-import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
+import {
+  ExclamationCircleIcon,
+  SparklesIcon,
+} from "@heroicons/react/24/outline";
 import type { ReactNode, SVGProps } from "react";
 
 type CsvTableProps = {
@@ -7,46 +11,45 @@ type CsvTableProps = {
   headers: string[];
   bgColor?: string;
   textColor?: string;
+  cleanedRows: string;
   heroicon?: React.ReactNode;
+  sparkles?: React.ReactNode;
   title: string;
   subtitle?: string;
 };
 
-// colors: {
-//   gray: {
-//     darkest: "#0f0f0fff",
-//     dark: "#1a1919ff",
-//     light: "#242323ff",
-//     lightest: "#dbd5d5ff",
-// 
-//   },
-//   purple: {
-//     main: "#7f20f3ff",
-//     light: "#8d33faff",
-//   },
-//   orange: {
-//     main: "#f8de97e8",
-//     textdark: "#f08344ff"
-//     textlight: "#f7853aff"
-//     textlight: "#ff810cff"
-//   },
+// @theme {
+//   --color-gray-bg: #0f0f0fff;
+//   --color-gray-secondary: #1a1919ff;
+//   --color-gray-third: #242323ff;
+// --color-gray-hover: #363535ff;
+//   --color-gray-text: #b3afafff;
+//   --color-purple-main: #7f20f3ff;
+//   --color-purple-light: #8d33faff;
+//   --color-orange-main: #f3b43fff;
+//   --color-orange-secondary: #f08344ff;
+//   --color-orange-text: #7c3b10ff;
+// --color-green-text: #155a07ff;
+// }
 
 export default function TableCard({
   rows,
   headers,
-  bgColor = `bg-orange-main`,
-  textColor = "text-orange-900",
+  bgColor,
+  textColor,
+  cleanedRows,
   heroicon,
+  sparkles,
   title,
   subtitle,
 }: CsvTableProps) {
+  const rowLength: number = rows.length;
+
   return (
-    <div className="relative overflow-hidden  rounded-xl border  border-gray-dark">
-      <div
-        className={`w-full ${bgColor}  px-2 py-2 text-sm`}
-      >
-        <div className="flex">
-          <h1 className={`flex items-center  text-lg ${textColor}`}>
+    <div className="relative  overflow-hidden  rounded-xl border border-gray-300 dark:border-gray-third">
+      <div className={`w-full ${bgColor}  px-2 py-2 text-sm`}>
+        <div className="flex ">
+          <h1 className={`flex items-center  text-lg  ${textColor}`}>
             {heroicon}
             {title}
           </h1>
@@ -55,11 +58,11 @@ export default function TableCard({
       </div>
       <div className="overflow-x-auto">
         <div className="min-w-max">
-          <table className="min-w-full text-left text-sm  dark:bg-gray-light bg-gray-100">
+          <table className="min-w-full text-left text-sm  dark:bg-gray-secondary bg-gray-100">
             <thead className="">
-              <tr className="bg-gray-300 dark:bg-gray-dark ">
+              <tr className="bg-gray-300 dark:bg-gray-third ">
                 {headers.map((h) => (
-                  <th className="px-5 py-3 font-medium dark:text-gray-lightest" key={h}>
+                  <th className="px-5 py-3 font-medium " key={h}>
                     {h}
                   </th>
                 ))}
@@ -67,9 +70,15 @@ export default function TableCard({
             </thead>
             <tbody className="">
               {rows.slice(0, 5).map((row, i) => (
-                <tr className="whitespace-nowrap" key={i}>
+                <tr
+                  className="whitespace-nowrap dark:hover:bg-gray-third"
+                  key={i}
+                >
                   {headers.map((h) => (
-                    <td className="border-t border-gray-darkest px-6 py-4" key={h}>
+                    <td
+                      className="border-t border-gray-300 dark:border-gray-bg px-6 py-4  dark:text-gray-text "
+                      key={h}
+                    >
                       {String(row[h] ?? "")}
                     </td>
                   ))}
@@ -77,6 +86,16 @@ export default function TableCard({
               ))}
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <div className="w-full  px-2 py-2 text-sm dark:text-gray-text  dark:bg-gray-third border-t border-gray-200 dark:border-gray-bg ">
+        <div className="flex justify-between">
+          <h1 className={`flex items-center `}>
+            {sparkles}
+            {cleanedRows}
+          </h1>
+          <h1 className=" font-semibold">{rowLength}</h1>
         </div>
       </div>
     </div>
