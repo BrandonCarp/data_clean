@@ -28,13 +28,14 @@ type CsvTableProps = {
 //     main: "#f8de97e8",
 //     textdark: "#f08344ff"
 //     textlight: "#f7853aff"
+//     textlight: "#ff810cff"
 //   },
 
 export default function TableCard({
   rows,
   headers,
   bgColor = `bg-orange-main`,
-  textColor = "text-amber-900",
+  textColor = "text-orange-900",
   heroicon,
   title,
   subtitle,
@@ -42,7 +43,7 @@ export default function TableCard({
   return (
     <div className="relative overflow-hidden  rounded-xl border  border-gray-dark">
       <div
-        className={`w-full ${bgColor} border-b border-gray-light  px-2 py-2 text-sm`}
+        className={`w-full ${bgColor}  px-2 py-2 text-sm`}
       >
         <div className="flex">
           <h1 className={`flex items-center  text-lg ${textColor}`}>
@@ -64,7 +65,7 @@ export default function TableCard({
                 ))}
               </tr>
             </thead>
-            <tbody className="border-b ">
+            <tbody className="">
               {rows.slice(0, 5).map((row, i) => (
                 <tr className="whitespace-nowrap" key={i}>
                   {headers.map((h) => (
