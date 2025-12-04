@@ -66,12 +66,12 @@ export default function CsvPreview() {
           </p>
         </button>
       </div>
-      <section className="">
+      <section className="mb-10">
         <TableCard
           rows={rows}
           headers={headers}
           title="Cleaned CSV"
-          bgColor="bg-gradient-to-r from-green-500 to-green-900"
+          bgColor="bg-gradient-to-r from-green-400 to-green-900"
           textColor="text-green-text font-semibold"
           subtitle="Cleaned Data"
           cleanedRows="Rows cleaned"
