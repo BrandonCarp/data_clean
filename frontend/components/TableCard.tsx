@@ -46,7 +46,7 @@ export default function TableCard({
   const rowLength: number = rows.length;
 
   return (
-    <div className="relative  overflow-hidden  rounded-xl border border-gray-300 dark:border-gray-third">
+    <div className="relative overflow-hidden   rounded-xl border border-gray-300 dark:border-gray-third">
       <div className={`w-full ${bgColor}  px-2 py-2 text-sm`}>
         <div className="flex ">
           <h1 className={`flex items-center  text-lg  ${textColor}`}>
@@ -56,13 +56,13 @@ export default function TableCard({
         </div>
         {subtitle && <h2 className={`p-1 ${textColor}`}>{subtitle}</h2>}
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-scroll">
         <div className="min-w-max">
           <table className="min-w-full text-left text-sm  dark:bg-gray-secondary bg-gray-100">
             <thead className="">
               <tr className="bg-gray-300 dark:bg-gray-third ">
                 {headers.map((h) => (
-                  <th className="px-5 py-3 font-medium " key={h}>
+                  <th className="px-5 py-3 font-medium" key={h}>
                     {h}
                   </th>
                 ))}
@@ -88,10 +88,9 @@ export default function TableCard({
           </table>
         </div>
       </div>
-
       <div className="w-full  px-2 py-2 text-sm dark:text-gray-text  dark:bg-gray-third border-t border-gray-200 dark:border-gray-bg ">
         <div className="flex justify-between">
-          <h1 className={`flex items-center `}>
+          <h1 className="flex items-center">
             {sparkles}
             {cleanedRows}
           </h1>

@@ -1,10 +1,10 @@
 "use client";
 
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 
 export default function DarkButton() {
-
+  const [theme, setTheme] = useState<"light" | "dark">("light")
 
   const toggleTheme = () => {
     if (document.documentElement.classList.contains("dark")) {
