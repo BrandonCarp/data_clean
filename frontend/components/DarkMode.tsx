@@ -1,44 +1,32 @@
 "use client";
-
+import { useTheme } from "next-themes";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export default function DarkButton() {
-  const [theme, setTheme] = useState<"light" | "dark">("light")
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
+  // useEffect(() => {
+  //   const theme = localStorage.getItem("theme");
+  //   if (theme === "dark") {
+  //     document.documentElement.classList.add("dark");
+  //   }
+  // }, []);
 
   const toggleTheme = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-   
-    }
+    const next = resolvedTheme === "dark" ? "light" : "dark";
+    setTheme(next);
   };
 
-  useEffect(() => {
-
-      const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-
-    return (
-      <button
-        onClick={toggleTheme}
-        className=" text-black dark:text-white transition delay-50 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer"
-      >
-        <Cog6ToothIcon className="size-5  " />
-      </button>
-    );
-  
+  return (
+    <button
+      onClick={toggleTheme}
+      className=" text-black dark:text-white transition delay-50 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer"
+    >
+      <Cog6ToothIcon className="size-5  " />
+    </button>
+  );
 }
-
-
 
 // Look Into
 // 1. state is derived from external stuff *before* effects run

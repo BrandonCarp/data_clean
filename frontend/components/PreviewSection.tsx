@@ -38,6 +38,8 @@ export default function CsvPreview() {
         const data = result.data || [];
         setRows(data);
         setHeaders(Object.keys(data[0] || {}));
+      } catch (err) {
+        console.error("Failed to load/parse CSV", err);
       } finally {
         setLoading(false);
       }
@@ -52,15 +54,16 @@ export default function CsvPreview() {
         rows={rows}
         headers={headers}
         title="Original CSV"
-        bgColor="bg-gradient-to-r from-yellow-400 to-orange-500"
-        textColor="text-orange-text font-semibold"
+        bgColor="bg-amber-100"
+        bdColor="border border-amber-700"
+        textColor="text-amber-800 font-semibold"
         subtitle="Messy Data with inconsistencies"
         cleanedRows="Rows to be cleaned"
         heroicon={<ExclamationCircleIcon className="size-5 mr-1 " />}
         sparkles={<SparklesIcon className="size-4 mr-1 dark:text-gray-text" />}
       />
       <div className="flex justify-center">
-        <button className=" bg-gray-secondary  dark:bg-gray-third text-white font-medium py-2 px-6 rounded hover:bg-gray-third cursor-pointer dark:hover:bg-gray-hover ">
+        <button className=" bg-gray-bg dark:bg-gray-third text-white font-medium py-2 px-6 rounded hover:bg-gray-third cursor-pointer dark:hover:bg-gray-hover ">
           <p className="flex items-center gap-1">
             <SparklesIcon className="size-4 " /> Clean Csv
           </p>
@@ -71,8 +74,9 @@ export default function CsvPreview() {
           rows={rows}
           headers={headers}
           title="Cleaned CSV"
-          bgColor="bg-gradient-to-r from-green-400 to-green-900"
-          textColor="text-green-text font-semibold"
+          bgColor="bg-emerald-200"
+          bdColor="border border-emerald-500"
+          textColor="text-emerald-900 font-semibold"
           subtitle="Cleaned Data"
           cleanedRows="Rows cleaned"
           heroicon={<CheckCircleIcon className="size-5 mr-1 " />}

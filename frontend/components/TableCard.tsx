@@ -9,7 +9,8 @@ import type { ReactNode, SVGProps } from "react";
 type CsvTableProps = {
   rows: Row[];
   headers: string[];
-  bgColor?: string;
+  bgColor: string;
+  bdColor: string;
   textColor?: string;
   cleanedRows: string;
   heroicon?: React.ReactNode;
@@ -36,6 +37,7 @@ export default function TableCard({
   rows,
   headers,
   bgColor,
+  bdColor,
   textColor,
   cleanedRows,
   heroicon,
@@ -46,8 +48,10 @@ export default function TableCard({
   const rowLength: number = rows.length;
 
   return (
-    <div className="relative overflow-hidden   rounded-xl border border-gray-300 dark:border-gray-third">
-      <div className={`w-full ${bgColor}  px-2 py-2 text-sm`}>
+    <div className="relative overflow-hidden   rounded-xl border border-gray-300 dark:border-none  dark:border-gray-third">
+      <div
+        className={`w-full ${bgColor} ${bdColor} rounded-t-xl px-2 py-2 text-sm`}
+      >
         <div className="flex ">
           <h1 className={`flex items-center  text-lg  ${textColor}`}>
             {heroicon}
@@ -58,9 +62,9 @@ export default function TableCard({
       </div>
       <div className="overflow-x-scroll">
         <div className="min-w-max">
-          <table className="min-w-full text-left text-sm  dark:bg-gray-secondary bg-gray-100">
+          <table className="min-w-full text-left text-sm  dark:bg-gray-secondary bg-gray-50">
             <thead className="">
-              <tr className="bg-gray-300 dark:bg-gray-third ">
+              <tr className="bg-gray-100 dark:bg-gray-third ">
                 {headers.map((h) => (
                   <th className="px-5 py-3 font-medium" key={h}>
                     {h}
