@@ -6,12 +6,6 @@ import { useEffect, useState } from "react";
 export default function DarkButton() {
   const { theme, setTheme, resolvedTheme } = useTheme();
 
-  // useEffect(() => {
-  //   const theme = localStorage.getItem("theme");
-  //   if (theme === "dark") {
-  //     document.documentElement.classList.add("dark");
-  //   }
-  // }, []);
 
   const toggleTheme = () => {
     const next = resolvedTheme === "dark" ? "light" : "dark";

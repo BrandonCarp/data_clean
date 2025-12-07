@@ -2,11 +2,13 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Preview from "@/components/PreviewSection";
 import { FormCard } from "@/components/FormCard";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <div className="">
       <Navbar />
+      <Header />
       <FormCard />
       <Preview />
     </div>
