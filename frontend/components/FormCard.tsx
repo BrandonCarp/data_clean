@@ -25,18 +25,12 @@ import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 //       }
 //     })();
 //   }, []);
-
+// Style this
 export const FormCard = () => {
   return (
-    <div className="block flex gap-2 text-sm">
-      <label>Upload File</label>
-      <input
-        className=""
-        type="file"
-        name="file"
-        accept=".csv,.xlsx"
-        required
-      />
+    <div className="">
+      <label className="block mb-2.5 text-sm font-medium text-heading">Upload file</label>
+     <input className="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="file_input" type="file" />
     </div>
   );
 };
