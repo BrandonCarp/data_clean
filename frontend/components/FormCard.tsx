@@ -25,7 +25,36 @@ import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 //       }
 //     })();
 //   }, []);
-// Style this
+
+
+// Recommended path for you right now
+
+// If we zoom out and align with your FAANG-ready journey:
+
+// Phase 1 (Now): “Just clean my CSV”
+
+// Route handler + formData.
+
+// Process CSV in memory.
+
+// Return cleaned CSV / preview.
+
+// No persistence. No S3. No presigned anything.
+
+// Phase 2 (Later, as a flex)
+
+// Add:
+
+// User accounts (auth)
+
+// “Upload history” with Postgres
+
+// Optional S3/presigned URLs for storing the original + cleaned CSVs
+
+// Now you can talk in interviews about:
+
+// “Initially I processed files in-memory and returned them, but to handle larger files & persistence I moved to S3 + presigned URLs.”
+
 export const FormCard = () => {
   return (
     <div className="">
