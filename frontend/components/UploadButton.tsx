@@ -1,12 +1,36 @@
 "use client";
+import { useState } from "react";
 import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 
 export default function UploadButton() {
+  const [note, setNote] = useState<string>("");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setNote("Uploading....");
+
+    const formData = new FormData(e.currentTarget);
+
+    const res = await fetch("/api/upload/uploadRoute", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data: any = await res.json().catch(() => null);
+
+    if (!res.ok) {
+      setNote(`Error ${res.status}: ${data?.error ?? "Upload failed"}`);
+      return;
+    }
+
+    setNote(`Uploaded: ${data.filename} (${data.size} bytes)`);
+  }
+
   return (
-    <>
-      <button className="bg-slate-950 dark:bg-white text-white dark:text-black rounded px-2 py-1 transition delay-50 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer ">
-        <ArrowUpTrayIcon className="size-4  " />
-      </button>
-    </>
+    <form onSubmit={onSubmit} encType="multipart/form-data">
+      <input type="file" name="file" accept=".csv,text/csv" required />
+      <button type="submit">Upload Csv</button>
+      <p>{note}</p>
+    </form>
   );
 }

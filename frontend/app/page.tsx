@@ -9,7 +9,7 @@ export default function Home() {
     <div className="">
       <Navbar />
       <Header />
-      <FormCard />
+
       <Preview />
     </div>
   );
