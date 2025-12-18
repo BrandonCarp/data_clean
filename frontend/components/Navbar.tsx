@@ -42,7 +42,7 @@ export default function Navbar() {
         </Link>
         {/* Change dark mode button to toggle or 3 dots with a modal that drops down or  */}
         <DarkButton />
-        <UploadButton />
+        {/* <UploadButton /> */}
       </div>
     </nav>
   );

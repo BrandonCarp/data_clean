@@ -12,7 +12,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "CSV Files only" }, { status: 400 });
   }
 
-  const csvText = await value.text();
+
+  // const csvText = await value.text();
 
   return NextResponse.json({
     ok: true,
