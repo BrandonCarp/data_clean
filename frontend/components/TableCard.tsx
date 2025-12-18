@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { Row } from "@/lib/types/typeHelpers";
 import {
   ExclamationCircleIcon,
@@ -46,6 +47,7 @@ export default function TableCard({
   subtitle,
 }: CsvTableProps) {
   const rowLength: number = rows.length;
+  const [loading, setLoading] = useState(true);
 
   return (
     <div className="relative overflow-hidden   rounded-xl border border-gray-300 dark:border-none  dark:border-gray-third">
