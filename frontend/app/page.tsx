@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <div className="">
       <Navbar />
+
       <Header />
+
       <TableSection />
     </div>
   );

@@ -1,7 +1,16 @@
-export default function PreviewButton({ loadCsv }) {
+type PrevButtonProps = {
+  parseCsv: () => Promise<void>;
+};
+
+export default function PreviewButton({ parseCsv }: PrevButtonProps) {
   return (
     <div>
-      <button onClick={loadCsv}>Preview Button</button>
+      <button
+        className="bg-white text-black rounded px-2 cursor-pointer my-2"
+        onClick={parseCsv}
+      >
+        Preview Button
+      </button>
     </div>
   );
 }
