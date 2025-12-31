@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Papa from "papaparse";
 import PreviewButton from "./PreviewButton";
 import TableCard from "./TableCard";
@@ -9,15 +9,20 @@ import {
   ExclamationCircleIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
+import CleanData from "../api/upload/CleanData";
+import CleanButton from "./CleanButton";
 
 export default function TableSection() {
   const [prevTableLoad, setPrevTableLoad] = useState(true);
   const [rows, setRows] = useState<Row[]>([]);
   const [headers, setHeaders] = useState<string[]>([]);
+  const [fileName, setFileName] = useState<string>("Load Messy CSV"); // will update to load file name on page start up
+  const [messyCsv, setMessyCsv] = useState<string>();
 
   async function fetchCsv() {
     const res = await fetch("/data/raw_orders.csv");
     const text = await res.text();
+    setMessyCsv(text);
     return text;
   }
 
@@ -39,14 +44,17 @@ export default function TableSection() {
       setPrevTableLoad(false);
     }
   }
+
   return (
     <div className=" mx-5">
-      TableSection
       <section className="">
         {/* Preview Section */}
-        <PreviewButton parseCsv={parseCsv} />
+
         {prevTableLoad ? (
-          <div>Preview Section</div>
+          <div>
+            Preview Section
+            <PreviewButton parseCsv={parseCsv} fileName={fileName} />
+          </div>
         ) : (
           <TableCard
             rows={rows}
@@ -63,6 +71,23 @@ export default function TableSection() {
             }
           />
         )}
+      </section>
+
+      <section className="mb-10">
+        <TableCard
+          rows={rows}
+          headers={headers}
+          title="Cleaned CSV"
+          bgColor="bg-emerald-200"
+          bdColor="border border-emerald-500"
+          textColor="text-emerald-900 font-semibold"
+          subtitle="Cleaned Data"
+          cleanedRows="Rows cleaned"
+          heroicon={<CheckCircleIcon className="size-5 mr-1 " />}
+          sparkles={
+            <SparklesIcon className="size-4 mr-1 dark:text-gray-text" />
+          }
+        />
       </section>
     </div>
   );

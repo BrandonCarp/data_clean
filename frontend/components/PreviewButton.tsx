@@ -2,18 +2,10 @@ import { useState, useEffect } from "react";
 
 type PrevButtonProps = {
   parseCsv: () => Promise<void>;
+  fileName: string;
 };
 
-export default function PreviewButton({ parseCsv }: PrevButtonProps) {
-  const [fileName, setFileName] = useState<string>("Load Messy CSV");
-
-  useEffect(() => {
-    async () => {
-      try {
-      } finally {
-      }
-    };
-  }, []);
+export default function PreviewButton({ parseCsv, fileName }: PrevButtonProps) {
   return (
     <div>
       <button
