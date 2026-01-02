@@ -1,19 +1,42 @@
-import { useState, useEffect } from "react";
-import { SparklesIcon } from "@heroicons/react/24/solid";
+import React from "react";
+import cleanData from "../api/upload/CleanData";
+import { Row } from "@/lib/types/typeHelpers";
 
-type PrevButtonProps = {
-  parseCsv: () => Promise<void>;
-  fileName: string;
-};
+interface CleanButtonProps {
+  messyCsv: string | undefined;
+  setCleanedRows: React.Dispatch<React.SetStateAction<Row[]>>;
+  setCleanedHeaders: React.Dispatch<React.SetStateAction<string[]>>;
+  setCleanTableLoad: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export default function CleanButton({ parseCsv, fileName }: PrevButtonProps) {
+export default function CleanButton({
+  messyCsv,
+  setCleanedRows,
+  setCleanedHeaders,
+  setCleanTableLoad,
+}: CleanButtonProps) {
+  async function handleClean() {
+    if (!messyCsv) return;
+
+    try {
+      const cleaned = await cleanData(messyCsv);
+
+      if (cleaned?.rows) {
+        setCleanedRows(cleaned.rows);
+        setCleanedHeaders(Object.keys(cleaned.rows[0] || {}));
+        setCleanTableLoad(false);
+      }
+    } catch (err) {
+      console.error("Error cleaning CSV:", err);
+    }
+  }
+
   return (
-    <div>
-      <button className=" bg-gray-bg dark:bg-gray-third text-white font-medium py-2 px-6 rounded hover:bg-gray-third cursor-pointer dark:hover:bg-gray-hover ">
-        <p className="flex items-center gap-1">
-          <SparklesIcon className="size-4 " /> Clean Csv
-        </p>
-      </button>
-    </div>
+    <button
+      onClick={handleClean}
+      className="px-4 py-5 bg-blue-600 text-white rounded hover:bg-blue-700"
+    >
+      Clean CSV
+    </button>
   );
 }

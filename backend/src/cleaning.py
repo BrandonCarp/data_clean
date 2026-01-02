@@ -3,9 +3,6 @@ import numpy as np
 
 
 
-
-# csv = "../data/raw_orders.csv"
-
 def main(df: pd.DataFrame) -> pd.DataFrame:
     df = clean_strings(df)
     df = parse_cost(df)

@@ -14,10 +14,13 @@ import CleanButton from "./CleanButton";
 
 export default function TableSection() {
   const [prevTableLoad, setPrevTableLoad] = useState(true);
+  const [cleanTableLoad, setCleanTableLoad] = useState(true);
   const [rows, setRows] = useState<Row[]>([]);
   const [headers, setHeaders] = useState<string[]>([]);
-  const [fileName, setFileName] = useState<string>("Load Messy CSV"); // will update to load file name on page start up
+  const [fileName, setFileName] = useState<string>("Load Messy CSV");
   const [messyCsv, setMessyCsv] = useState<string>();
+  const [cleanedRows, setCleanedRows] = useState<Row[]>([]);
+  const [cleanedHeaders, setCleanedHeaders] = useState<string[]>([]);
 
   async function fetchCsv() {
     const res = await fetch("/data/raw_orders.csv");
@@ -56,39 +59,74 @@ export default function TableSection() {
             <PreviewButton parseCsv={parseCsv} fileName={fileName} />
           </div>
         ) : (
+          <div>
+            <TableCard
+              rows={rows}
+              headers={headers}
+              title="Original CSV"
+              bgColor="bg-amber-100"
+              bdColor="border border-amber-700"
+              textColor="text-amber-800 font-semibold"
+              subtitle="Messy Data with inconsistencies"
+              cleanedRows="Rows to be cleaned"
+              heroicon={<ExclamationCircleIcon className="size-5 mr-1 " />}
+              sparkles={
+                <SparklesIcon className="size-4 mr-1 dark:text-gray-text" />
+              }
+            />
+            {cleanTableLoad ? (
+              <CleanButton
+                messyCsv={messyCsv}
+                setCleanedRows={setCleanedRows}
+                setCleanedHeaders={setCleanedHeaders}
+                setCleanTableLoad={setCleanTableLoad}
+              />
+            ) : (
+              <section className="my-5">
+                <TableCard
+                  rows={cleanedRows}
+                  headers={cleanedHeaders}
+                  title="Cleaned CSV"
+                  bgColor="bg-emerald-200"
+                  bdColor="border border-emerald-500"
+                  textColor="text-emerald-900 font-semibold"
+                  subtitle="Cleaned Data"
+                  cleanedRows="Rows cleaned"
+                  heroicon={<CheckCircleIcon className="size-5 mr-1 " />}
+                  sparkles={
+                    <SparklesIcon className="size-4 mr-1 dark:text-gray-text" />
+                  }
+                />
+              </section>
+            )}
+          </div>
+        )}
+      </section>
+      {/* {cleanTableLoad ? (
+        <CleanButton
+          messyCsv={messyCsv}
+          setCleanedRows={setCleanedRows}
+          setCleanedHeaders={setCleanedHeaders}
+          setCleanTableLoad={setCleanTableLoad}
+        />
+      ) : (
+        <section className="my-5">
           <TableCard
-            rows={rows}
-            headers={headers}
-            title="Original CSV"
-            bgColor="bg-amber-100"
-            bdColor="border border-amber-700"
-            textColor="text-amber-800 font-semibold"
-            subtitle="Messy Data with inconsistencies"
-            cleanedRows="Rows to be cleaned"
-            heroicon={<ExclamationCircleIcon className="size-5 mr-1 " />}
+            rows={cleanedRows}
+            headers={cleanedHeaders}
+            title="Cleaned CSV"
+            bgColor="bg-emerald-200"
+            bdColor="border border-emerald-500"
+            textColor="text-emerald-900 font-semibold"
+            subtitle="Cleaned Data"
+            cleanedRows="Rows cleaned"
+            heroicon={<CheckCircleIcon className="size-5 mr-1 " />}
             sparkles={
               <SparklesIcon className="size-4 mr-1 dark:text-gray-text" />
             }
           />
-        )}
-      </section>
-
-      <section className="mb-10">
-        <TableCard
-          rows={rows}
-          headers={headers}
-          title="Cleaned CSV"
-          bgColor="bg-emerald-200"
-          bdColor="border border-emerald-500"
-          textColor="text-emerald-900 font-semibold"
-          subtitle="Cleaned Data"
-          cleanedRows="Rows cleaned"
-          heroicon={<CheckCircleIcon className="size-5 mr-1 " />}
-          sparkles={
-            <SparklesIcon className="size-4 mr-1 dark:text-gray-text" />
-          }
-        />
-      </section>
+        </section>
+      )} */}
     </div>
   );
 }

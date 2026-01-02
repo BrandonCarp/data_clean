@@ -50,7 +50,7 @@ export default function TableCard({
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="relative overflow-hidden   rounded-xl border border-gray-300 dark:border-none  dark:border-gray-third">
+    <div className="relative overflow-hidden   rounded-xl border border-gray-300 dark:border-none  dark:border-gray-third my-3">
       <div
         className={`w-full ${bgColor} ${bdColor} rounded-t-xl px-2 py-2 text-sm`}
       >
