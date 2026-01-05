@@ -23,9 +23,13 @@ export default function TableSection() {
   const [cleanedHeaders, setCleanedHeaders] = useState<string[]>([]);
 
   async function fetchCsv() {
-    const res = await fetch("/data/raw_orders.csv");
+    const path = "/data/raw_orders.csv";
+    const res = await fetch(path);
     const text = await res.text();
+
     setMessyCsv(text);
+    setFileName(path.split("/").pop()!);
+
     return text;
   }
 
@@ -63,7 +67,7 @@ export default function TableSection() {
             <TableCard
               rows={rows}
               headers={headers}
-              title="Original CSV"
+              title={fileName}
               bgColor="bg-amber-100"
               bdColor="border border-amber-700"
               textColor="text-amber-800 font-semibold"
@@ -86,7 +90,7 @@ export default function TableSection() {
                 <TableCard
                   rows={cleanedRows}
                   headers={cleanedHeaders}
-                  title="Cleaned CSV"
+                  title={fileName}
                   bgColor="bg-emerald-200"
                   bdColor="border border-emerald-500"
                   textColor="text-emerald-900 font-semibold"

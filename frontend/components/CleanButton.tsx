@@ -34,7 +34,7 @@ export default function CleanButton({
   return (
     <button
       onClick={handleClean}
-      className="px-4 py-5 bg-blue-600 text-white rounded hover:bg-blue-700"
+      className="rounded-md border border-slate-600 px-3 py-2 text-sm"
     >
       Clean CSV
     </button>

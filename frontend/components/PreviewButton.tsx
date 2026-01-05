@@ -9,7 +9,7 @@ export default function PreviewButton({ parseCsv, fileName }: PrevButtonProps) {
   return (
     <div>
       <button
-        className="bg-white text-black rounded px-2 cursor-pointer my-2"
+        className="rounded-md border border-slate-600 px-3 py-2 text-sm"
         onClick={parseCsv}
       >
         {fileName}
