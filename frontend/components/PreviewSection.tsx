@@ -8,11 +8,6 @@ import {
   ExclamationCircleIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
-// import CheckCircleIcon from "@heroicons/react/24/outline"; - for cleaned csv
-
-// async load func fetch csv , await res.text return text
-// useState rows, headers, loading
-// in useEffect call load csv, Papa.parse<Row>(text, { header: skipEmptyLines}) result data +  set rows/headers
 
 async function loadCsv() {
   const res = await fetch("/data/raw_orders.csv");

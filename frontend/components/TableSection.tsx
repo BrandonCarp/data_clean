@@ -58,26 +58,29 @@ export default function TableSection() {
         {/* Preview Section */}
 
         {prevTableLoad ? (
-          <div>
-            Preview Section
+          <div className="flex flex-col items-center ">
+            <h1>Click to preview messy data</h1>
             <PreviewButton parseCsv={parseCsv} fileName={fileName} />
           </div>
         ) : (
-          <div>
-            <TableCard
-              rows={rows}
-              headers={headers}
-              title={fileName}
-              bgColor="bg-amber-100"
-              bdColor="border border-amber-700"
-              textColor="text-amber-800 font-semibold"
-              subtitle="Messy Data with inconsistencies"
-              cleanedRows="Rows to be cleaned"
-              heroicon={<ExclamationCircleIcon className="size-5 mr-1 " />}
-              sparkles={
-                <SparklesIcon className="size-4 mr-1 dark:text-gray-text" />
-              }
-            />
+          <div className="flex flex-col items-center">
+            <section className="w-[100%]">
+              <TableCard
+                rows={rows}
+                headers={headers}
+                title={fileName}
+                bgColor="bg-amber-100"
+                bdColor="border border-amber-700"
+                textColor="text-amber-800 font-semibold"
+                subtitle="Messy Data with inconsistencies"
+                cleanedRows="Rows to be cleaned"
+                heroicon={<ExclamationCircleIcon className="size-5 mr-1 " />}
+                sparkles={
+                  <SparklesIcon className="size-4 mr-1 dark:text-gray-text" />
+                }
+              />
+            </section>
+
             {cleanTableLoad ? (
               <CleanButton
                 messyCsv={messyCsv}
