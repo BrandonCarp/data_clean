@@ -6,7 +6,9 @@ export default function Header() {
     <div className="flex flex-col items-center justify-center mb-10">
       {/* Text */}
 
-      <Image src={Hero} alt="Hero Image" className="" />
+
+      <Image src={Hero} alt="Hero Image" height={500} width={500} className="" />
+
 
       <div className="flex flex-col items-center text-center px-3 space-y-2">
         <div className="flex flex-col items-start ">

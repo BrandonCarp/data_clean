@@ -59,7 +59,7 @@ export default function TableSection() {
 
         {prevTableLoad ? (
           <div className="flex flex-col items-center ">
-            <h1>Click to preview messy data</h1>
+           
             <PreviewButton parseCsv={parseCsv} fileName={fileName} />
           </div>
         ) : (
