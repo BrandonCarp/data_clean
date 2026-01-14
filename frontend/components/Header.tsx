@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Hero from "../public/images/HeroImg.png";
+import { FolderIcon } from "@heroicons/react/24/outline";
+import { FolderArrowDownIcon } from "@heroicons/react/24/outline";
+import { DocumentMagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
   return (
@@ -14,14 +17,13 @@ export default function Header() {
         <div className="flex flex-col items-start ">
           <h1 className=" text-3xl font-semibold tracking-tight">ScrubHub</h1>
           <h1 className=" text-2xl font-semibold tracking-tight">
-            Lightening fast CSV Cleaner
+            Lightning-fast CSV Cleaner
           </h1>
         </div>
         <ul className="flex flex-col items-start text-black/70 dark:text-white/70">
-          <li className="border-b">Upload a file</li>
-          <li className="border-b">Preview messy data</li>
-          <li className="border-b">Clean and view scrubbed data</li>
-          <li className="border-b">Export scrubbed version</li>
+          <li className="flex items-center"><FolderIcon className="size-4 mr-1 dark:text-gray-text" /> Upload a file</li>
+          <li className="flex items-center"><DocumentMagnifyingGlassIcon className="size-4 mr-1 dark:text-gray-text" /> Preview messy data</li>
+          <li className="flex items-center"><FolderArrowDownIcon className="size-4 mr-1 dark:text-gray-text" />Clean and xxport scrubbed version</li>
         </ul>
       </div>
     </div>
