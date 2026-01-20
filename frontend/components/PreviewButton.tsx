@@ -21,11 +21,11 @@ type PrevButtonProps = {
 // }
 export default function PreviewButton({ parseCsv, fileName }: PrevButtonProps) {
   return (
-   <div className="border-2 border-gray-secondary border-dashed p-20 rounded-xl flex flex-col items-center text-center bg-gray-third">
-    <FolderArrowDownIcon className="size-10  dark:text-gray-secondary" />
+   <div className="border-2  border-dashed border-gray-300 p-20 rounded-xl flex flex-col items-center text-center dark:bg-gray-third dark:border-gray-secondary">
+    <FolderArrowDownIcon className="size-10 text-gray-300  dark:text-gray-secondary" />
    
       <button
-        className="rounded-md  bg-gray-secondary border-gray-hover hover:bg-gray-hover mt-5 py-3 px-1 text-sm font-semibold"
+        className="rounded-md mt-5 py-3 px-1 text-sm font-semibold bg-gray-300   border-gray-hover hover:bg-gray-hover  dark:bg-gray-secondary"
         onClick={parseCsv}
       >
         Preview Messy CSV

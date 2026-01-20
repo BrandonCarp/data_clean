@@ -68,7 +68,7 @@ export default function TableCard({
             <thead className="">
               <tr className="bg-gray-100 dark:bg-gray-third ">
                 {headers.map((h) => (
-                  <th className="px-5 py-3 font-medium text-yellow-200" key={h}>
+                  <th className="px-5 py-3 font-medium " key={h}>
                     {h}
                   </th>
                 ))}

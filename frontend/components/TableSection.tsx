@@ -71,7 +71,7 @@ export default function TableSection() {
                 title={fileName}
                 bgColor="bg-amber-100"
                 bdColor="border border-amber-700"
-                textColor="text-amber-800 font-semibold"
+                textColor="text-amber-800  font-semibold"
                 subtitle="Messy Data with inconsistencies"
                 cleanedRows="Rows to be cleaned"
                 heroicon={<ExclamationCircleIcon className="size-5 mr-1 " />}
