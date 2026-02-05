@@ -9,7 +9,6 @@ import {
   ExclamationCircleIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
-import CleanData from "../api/upload/CleanData";
 import CleanButton from "./CleanButton";
 
 export default function TableSection() {
@@ -89,7 +88,7 @@ export default function TableSection() {
                 setCleanTableLoad={setCleanTableLoad}
               />
             ) : (
-              <section className="my-5">
+              <section className="w-[100%] my-5">
                 <TableCard
                   rows={cleanedRows}
                   headers={cleanedHeaders}
