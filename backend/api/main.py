@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import numpy as np
 from io import StringIO
-from src.cleaning import main as clean_main
+from cleaning.engine import main as clean_main
 
 
 
