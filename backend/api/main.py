@@ -1,10 +1,11 @@
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import numpy as np
 from io import StringIO
-from cleaning.engine import main as clean_main
+from src.cleaning.engine import main as clean_main
 
 
 
